@@ -44,7 +44,7 @@ mkdir $NIFI_NEW/custom_lib/
 #rsync -av nifi/lib/ $NIFI_NEW/custom_lib/
 
 #Adicionando pass no Flow file
-echo "nifi"| nifi-toolkit/bin/encrypt-config.sh -f $NIFI_NEW/conf/flow.xml.gz -g $NIFI_NEW/conf/flow.xml.gz nifi -n $NIFI_NEW/conf/nifi.properties -x $NIFI_NEW/conf/nifi.properties
+echo "$NIFI_PASS"| nifi-toolkit/bin/encrypt-config.sh -f $NIFI_NEW/conf/flow.xml.gz -g $NIFI_NEW/conf/flow.xml.gz nifi -n $NIFI_NEW/conf/nifi.properties -x $NIFI_NEW/conf/nifi.properties
 
 
 for i in `echo "
